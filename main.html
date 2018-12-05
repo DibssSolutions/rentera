@@ -1,0 +1,440 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Rentera Main</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <header class="header js-header">
+        <div class="inner header__inner">
+          <div class="header__logo">
+            <a href="#" class="header__logo-link">
+              <img src="./img/logo-key.svg" alt="Rentera logo" class="header__logo-img">
+              <img src="./img/logo-text.svg" alt="Rentera logo text" class="header__logo-text">
+            </a>
+          </div>
+          <div class="header__btn visible-mob">
+            <a href="#" class="btn btn-default">Сдать квартиру</a>
+          </div>
+          <div class="header__menu-wrap">
+            <nav class="header__nav nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="/">Услуги</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/">Квартиры</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/">Отзывы</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__btn hidden-sm">
+              <a href="#" class="btn btn-default">Сдать квартиру</a>
+            </div>
+            <div class="header__login">
+              <button type="button" class="btn-link"><span>Вход</span></button>
+              <button type="button" class="btn-link"><span>Регистрация</span></button>
+            </div>
+          </div>
+          <button class="header__mob-btn hamburger hamburger--collapse js-mob-btn" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </header>
+      <div class="page-body">
+        <main class="page-content">
+          <div class="filters">
+            <div class="filters__field filter-types">
+              <div class="filter-types__list">
+                <button class="filter-types__item btn-link btn-link_green" type="button"><span>Район</span></button>
+                <button class="filter-types__item btn-link btn-link_green" type="button"><span>Метро</span></button>
+                <button class="filter-types__item btn-link btn-link_green" type="button"><span>Улица</span></button>
+              </div>
+              <div class="filters__dropdown">
+                <div class="dropdown">
+                  <div class="dropdown__title">
+                    <div class="dropdown__title-text">Киев</div>
+                    <svg class="icon icon-chevron">
+                      <use xlink:href="img/sprite.svg#icon-chevron"></use>
+                    </svg>
+                  </div>
+                  <div class="dropdown__list">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filters__field">
+              <div class="filters__actions">
+                <div class="filter-action filter-action_district filter-action_type">
+                  <div class="filter-action__img">
+                    <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="37px" height="36px" viewBox="0 0 37 36" enable-background="new 0 0 37 36" xml:space="preserve">
+                      <g id="Слой_2">
+                        <g id="Слой_1-2">
+                          <polygon fill="none" stroke="#5EB19B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="1,9 4,3 6,1 
+								14,1 19,7 20,7 21,6 27,6 30,4 31,3 36,3 36,7 31,10 31,14 36,18 36,21 31,22 28,23 22,24 25,29 23,34 20,35 17,27 12,21 11,18 
+								7,14 2,14 		" />
+                          <polyline fill="none" stroke="#5EB19B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="23,24 22,17 
+								32,14 32,10 26,13 24,14 19,10 18,10 18,13 10,11 10,13 17,15 18,13 21,15 22,17 17,18 17,15 17,18 12,21 11,18 10,11 4,3 7,7 
+								13,7 18,10 19,10 19,7 		" />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="filter-action__label">Шевченковский</div>
+                </div>
+                <div class="filter-action filter-action_more">
+                  <div class="filter-action__img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="8" viewBox="0 0 30 8">
+                      <path fill="#5EB19B" d="M11 2.1C12.1.2 14.5-.5 16.4.5c.7.4 1.2.9 1.6 1.6 1.1 1.9.4 4.4-1.6 5.4s-4.3.4-5.4-1.6a3.7 3.7 0 0 1 0-3.8z" />
+                      <path fill="#5EB19B" d="M22 2.1C23.1.2 25.5-.5 27.4.5c.7.4 1.2.9 1.6 1.6 1.1 1.9.4 4.4-1.6 5.4s-4.3.4-5.4-1.6a3.7 3.7 0 0 1 0-3.8z" />
+                      <path fill="#5EB19B" d="M.5 2.1C1.6.1 4-.6 5.9.5c.7.4 1.2.9 1.6 1.6 1.1 1.9.4 4.3-1.6 5.4S1.6 7.9.5 5.9a3.7 3.7 0 0 1 0-3.8z" />
+                    </svg>
+                  </div>
+                  <div class="filter-action__label">Еще фильтры</div>
+                </div>
+                <button class="btn btn-default btn-default_big filters-show-btn">Показать</button>
+              </div>
+            </div>
+            <div class="filters__bottom">
+              <div class="filters-results">14 вариантов</div>
+              <div class="reset-filters"><span>Сбросить фильтры</span></div>
+            </div>
+          </div>
+          <div class="flats-list-wrap">
+            <ul class="flats-list">
+              <li class="flats-list__item">
+                <a href="" class="flat-card">
+                  <figure class="flat-card__img">
+                    <img src="./img/flats/flat1.jpg" alt="flat1">
+                    <div class="flat-card__img-amount">
+                      <span>5</span>
+                      <span>
+                        <svg class="icon icon-camera">
+                          <use xlink:href="img/sprite.svg#icon-camera"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </figure>
+                  <div class="flat-card__body flat-info">
+                    <div class="flat-info__price">
+                      <span class="flat-info__price-sum">20 000</span>
+                      <span class="flat-info__price-currency">грн/мес.</span>
+                    </div>
+                    <div class="flat-info__street">ул. Тарасовская, 16 </div>
+                    <div class="flat-info__under">
+                      <span class="flat-info__under-img">
+                        <svg class="icon icon-metro">
+                          <use xlink:href="img/sprite.svg#icon-metro"></use>
+                        </svg>
+                      </span>
+                      <span class="flat-info__under-title">Университет</span>
+                    </div>
+                    <div class="flat-info__params">
+                      <div class="flat-info__param">
+                        <div class="flat-info__param-img">
+                          <svg class="icon icon-flat">
+                            <use xlink:href="img/sprite.svg#icon-flat"></use>
+                          </svg>
+                        </div>
+                        <div class="flat-info__param-title">4-ком.</div>
+                      </div>
+                      <div class="flat-info__param">
+                        <div class="flat-info__param-img">
+                          <svg class="icon icon-flat_size">
+                            <use xlink:href="img/sprite.svg#icon-flat_size"></use>
+                          </svg>
+                        </div>
+                        <div class="flat-info__param-title">118м2</div>
+                      </div>
+                      <div class="flat-info__param">
+                        <div class="flat-info__param-img">
+                          <svg class="icon icon-flat_bed">
+                            <use xlink:href="img/sprite.svg#icon-flat_bed"></use>
+                          </svg>
+                        </div>
+                        <div class="flat-info__param-title">3</div>
+                      </div>
+                    </div>
+                    <div class="flat-info__publication">
+                      <span class="flat-info__publication-title">Дата добавления объекта: </span>
+                      <span class="flat-info__publication-date">06.11.2018</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="flats-list__item">
+                <a href="" class="flat-card">
+                  <figure class="flat-card__img">
+                    <img src="./img/flats/flat2.jpg" alt="flat2">
+                    <div class="flat-card__img-amount">
+                      <span>10</span>
+                      <span>
+                        <svg class="icon icon-camera">
+                          <use xlink:href="img/sprite.svg#icon-camera"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </figure>
+                  <div class="flat-card__body flat-info">
+                    <div class="flat-info__price">
+                      <span class="flat-info__price-sum">$ 1 100</span>
+                      <span class="flat-info__price-currency">/мес.</span>
+                    </div>
+                    <div class="flat-info__street">ул. Костельная, 8</div>
+                    <div class="flat-info__under">
+                      <span class="flat-info__under-img">
+                        <svg class="icon icon-metro">
+                          <use xlink:href="img/sprite.svg#icon-metro"></use>
+                        </svg>
+                      </span>
+                      <span class="flat-info__under-title">Майдан Независимости</span>
+                    </div>
+                    <div class="flat-info__params">
+                      <div class="flat-info__param">
+                        <div class="flat-info__param-img">
+                          <svg class="icon icon-flat">
+                            <use xlink:href="img/sprite.svg#icon-flat"></use>
+                          </svg>
+                        </div>
+                        <div class="flat-info__param-title">4-ком.</div>
+                      </div>
+                      <div class="flat-info__param">
+                        <div class="flat-info__param-img">
+                          <svg class="icon icon-flat_size">
+                            <use xlink:href="img/sprite.svg#icon-flat_size"></use>
+                          </svg>
+                        </div>
+                        <div class="flat-info__param-title">118м2</div>
+                      </div>
+                      <div class="flat-info__param">
+                        <div class="flat-info__param-img">
+                          <svg class="icon icon-flat_bed">
+                            <use xlink:href="img/sprite.svg#icon-flat_bed"></use>
+                          </svg>
+                        </div>
+                        <div class="flat-info__param-title">3</div>
+                      </div>
+                    </div>
+                    <div class="flat-info__publication">
+                      <span class="flat-info__publication-title">Дата добавления объекта: </span>
+                      <span class="flat-info__publication-date">29.10.2018</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="flats-list__item">
+                <a href="" class="flat-card">
+                  <figure class="flat-card__img">
+                    <img src="./img/flats/flat1.jpg" alt="flat1">
+                    <div class="flat-card__img-amount">
+                      <span>5</span>
+                      <span>
+                        <svg class="icon icon-camera">
+                          <use xlink:href="img/sprite.svg#icon-camera"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </figure>
+                  <div class="flat-card__body flat-info">
+                    <div class="flat-info__price">
+                      <span class="flat-info__price-sum">20 000</span>
+                      <span class="flat-info__price-currency">грн/мес.</span>
+                    </div>
+                    <div class="flat-info__street">ул. Тарасовская, 16 </div>
+                    <div class="flat-info__under">
+                      <span class="flat-info__under-img">
+                        <svg class="icon icon-metro">
+                          <use xlink:href="img/sprite.svg#icon-metro"></use>
+                        </svg>
+                      </span>
+                      <span class="flat-info__under-title">Университет</span>
+                    </div>
+                    <div class="flat-info__params">
+                      <div class="flat-info__param">
+                        <div class="flat-info__param-img">
+                          <svg class="icon icon-flat">
+                            <use xlink:href="img/sprite.svg#icon-flat"></use>
+                          </svg>
+                        </div>
+                        <div class="flat-info__param-title">4-ком.</div>
+                      </div>
+                      <div class="flat-info__param">
+                        <div class="flat-info__param-img">
+                          <svg class="icon icon-flat_size">
+                            <use xlink:href="img/sprite.svg#icon-flat_size"></use>
+                          </svg>
+                        </div>
+                        <div class="flat-info__param-title">118м2</div>
+                      </div>
+                      <div class="flat-info__param">
+                        <div class="flat-info__param-img">
+                          <svg class="icon icon-flat_bed">
+                            <use xlink:href="img/sprite.svg#icon-flat_bed"></use>
+                          </svg>
+                        </div>
+                        <div class="flat-info__param-title">3</div>
+                      </div>
+                    </div>
+                    <div class="flat-info__publication">
+                      <span class="flat-info__publication-title">Дата добавления объекта: </span>
+                      <span class="flat-info__publication-date">06.11.2018</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="flats-list__item">
+                <a href="" class="flat-card">
+                  <figure class="flat-card__img">
+                    <img src="./img/flats/flat2.jpg" alt="flat2">
+                    <div class="flat-card__img-amount">
+                      <span>10</span>
+                      <span>
+                        <svg class="icon icon-camera">
+                          <use xlink:href="img/sprite.svg#icon-camera"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </figure>
+                  <div class="flat-card__body flat-info">
+                    <div class="flat-info__price">
+                      <span class="flat-info__price-sum">$ 1 100</span>
+                      <span class="flat-info__price-currency">/мес.</span>
+                    </div>
+                    <div class="flat-info__street">ул. Костельная, 8</div>
+                    <div class="flat-info__under">
+                      <span class="flat-info__under-img">
+                        <svg class="icon icon-metro">
+                          <use xlink:href="img/sprite.svg#icon-metro"></use>
+                        </svg>
+                      </span>
+                      <span class="flat-info__under-title">Майдан Независимости</span>
+                    </div>
+                    <div class="flat-info__params">
+                      <div class="flat-info__param">
+                        <div class="flat-info__param-img">
+                          <svg class="icon icon-flat">
+                            <use xlink:href="img/sprite.svg#icon-flat"></use>
+                          </svg>
+                        </div>
+                        <div class="flat-info__param-title">4-ком.</div>
+                      </div>
+                      <div class="flat-info__param">
+                        <div class="flat-info__param-img">
+                          <svg class="icon icon-flat_size">
+                            <use xlink:href="img/sprite.svg#icon-flat_size"></use>
+                          </svg>
+                        </div>
+                        <div class="flat-info__param-title">118м2</div>
+                      </div>
+                      <div class="flat-info__param">
+                        <div class="flat-info__param-img">
+                          <svg class="icon icon-flat_bed">
+                            <use xlink:href="img/sprite.svg#icon-flat_bed"></use>
+                          </svg>
+                        </div>
+                        <div class="flat-info__param-title">3</div>
+                      </div>
+                    </div>
+                    <div class="flat-info__publication">
+                      <span class="flat-info__publication-title">Дата добавления объекта: </span>
+                      <span class="flat-info__publication-date">29.10.2018</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="pagination">
+            <button type="button" class="btn btn-default btn-default_big show-more">ПОКАЗАТЬ БОЛЬШЕ</button>
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a href="" class="pagination__link is-active">1</a>
+                <a href="" class="pagination__link">2</a>
+                <a href="" class="pagination__link">3</a>
+                <a href="" class="pagination__link pagination__link_dots"></a>
+                <a href="" class="pagination__link">10</a>
+              </li>
+            </ul>
+          </div>
+        </main>
+      </div>
+      <aside class="page-map">
+      </aside>
+      </section>
+      <footer class="footer">
+        <div class="footer__top">
+          <nav class="footer-nav">
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">О проекте</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Арендодателям</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Услуги</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Отзывы</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Наша команда</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Арендаторам</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Квартиры</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__copy">&copy; 2018 Всі права захищені</div>
+          <div class="footer__socials socials">
+            <span class="socials__item">
+              <a href="" class="socials__link">
+                <svg class="icon icon-fb">
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg>
+              </a>
+            </span>
+            <span class="socials__item">
+              <a href="" class="socials__link">
+                <svg class="icon icon-in">
+                  <use xlink:href="img/sprite.svg#icon-in"></use>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+        <button type="button" class="go-top">
+          <svg class="icon icon-arrow">
+            <use xlink:href="img/sprite.svg#icon-arrow"></use>
+          </svg>
+        </button>
+      </footer>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>
