@@ -1,0 +1,35 @@
+{% import "partials/mixins/_common.html" as common %}
+
+{% macro flatInfo(props) %}
+
+		<div class="flat-info">
+				<div class="flat-info__price">
+						<span class="flat-info__price-sum">{{item.price}}</span>
+						<span class="flat-info__price-currency">{{item.currency}}</span>
+				</div>
+
+				<div class="flat-info__street">{{item.street}}</div>
+				<div class="flat-info__under">
+						<span class="flat-info__under-img">{{common.icon('metro')}}</span>
+						<span class="flat-info__under-title">{{item.under}}</span>
+				</div>
+
+				<div class="flat-info__params">
+						{% for param in item.params %}
+								<div class="flat-info__param">
+										<div class="flat-info__param-img">
+												{{common.icon(param.img)}}
+										</div>
+										<div class="flat-info__param-title">{{param.title}}</div>
+								</div>
+								{%endfor%}
+						</div>
+
+						<div class="flat-info__publication">
+								<span class="flat-info__publication-title">Дата добавления объекта:
+								</span>
+								<span class="flat-info__publication-date">{{item.date}}</span>
+						</div>
+				</div>
+[
+		{% endmacro %}
