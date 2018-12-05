@@ -1,0 +1,57 @@
+.footer
+	position: relative
+	+d-size(padding-top, 44)
+	+d-size(padding-bottom, 20)
+	+d-size(padding-left, 35)
+	+d-size(padding-right, 25)
+	background-color: $green
+	box-shadow: 0 -5px 13px rgba($black, 0.3)
+	
+	&__top
+		+d-size(margin-bottom, 40)
+
+	&__bottom
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+
+	&__copy
+		+d-size(font-size, 14)
+		line-height: 1
+		color: $white
+
+
+.footer-nav
+	&__list
+		display: flex
+		flex-flow: row wrap
+		width: 100%
+
+	&__item
+		flex: 1 1 25%
+		margin-bottom: 5px
+
+	&__link
+		+d-size(font-size, 24)
+		color: $white
+		text-decoration: none
+		border-bottom: 1px solid transparent
+		+trans
+		&:hover
+			border-color: currentColor
+
+.socials
+	&__item
+		vertical-align: middle
+		&:not(:last-child)
+			margin-right: 10px
+
+	&__link
+		text-decoration: none
+		.icon
+			fill: $white
+			+d-size(font-size, 35)
+			+trans
+		&:hover
+			.icon
+				opacity: .6

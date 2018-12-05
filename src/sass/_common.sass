@@ -1,0 +1,22 @@
+body
+	background: #FFF
+	width: 100%
+	min-height: 100%
+	margin: 0
+	padding: 0
+	+reg
+	line-height: 1.4
+
+	&.is-overflow
+		overflow: hidden
+
+.out
+	overflow: hidden
+
+.hidden-sm
+	+r(1023)
+		display: none
+ 
+.visible-mob
+	+rmin(768)
+		display: none

@@ -1,0 +1,180 @@
+.header
+	position: relative
+	z-index: 12
+	box-shadow: 0 2px 3px rgba(#000, 0.2)
+	+sm
+		box-shadow: 0 7px 10px rgba(#000, 0.2)
+	&.is-fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+
+	&__inner
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+		align-items: center
+		height: 52px
+		+d-size(height, 130)
+		.is-fixed &
+			+d-size(height, 90)
+
+	&__logo
+		margin-top: -5px
+		.is-fixed &	
+			margin-top: 0
+
+	&__logo-link
+		display: flex
+		justify-content: space-between
+		align-items: center
+		text-decoration: none
+		img
+			width: 100%
+
+	&__logo-img
+		max-width: 20px
+		+d-size(max-width, 50)
+		margin-right: 5px
+		+trans
+		.is-fixed &
+			+d-size(max-width, 33)
+		+sm
+			margin-right: 10px
+
+	&__logo-text
+		max-width: 80px
+		+d-size(max-width, 215)
+		+trans
+		.is-fixed &
+			opacity: 0
+			visibility: hidden
+
+	&__dropdown
+		margin-left: auto
+		+d-size(margin-right, 70)
+
+	&__nav
+		+md
+			+d-size(margin-right, 70)
+
+	&__login
+		display: flex	
+		align-items: center
+		+d-size(margin-left, 70)			
+
+	&__menu-wrap
+		position: absolute
+		top: 0
+		right: 0
+		height: 100vh
+		min-height: 100%
+		display: flex
+		flex-flow: column
+		justify-content: space-between
+		transform: translateX(105%)
+		transition: transform .15s ease-in-out
+		padding: 60px 20px 15px
+		box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)
+		background-color: $white
+		+md
+			position: relative
+			top: auto
+			right: auto
+			height: auto
+			min-height: auto
+			align-items: center
+			justify-content: space-between
+			padding: 0
+			box-shadow: none
+
+		.is-open &
+			transform: translateX(0)
+
+.dropdown
+	position: relative
+	&.is-open
+		.dropdown__list
+			visibility: visible
+			opacity: 1
+
+	&__title
+		display: flex
+		justify-content: space-between
+		cursor: pointer
+
+	&__title-text
+		margin-right: 5px
+		+bold
+		+d-size(font-size, 30)
+		+sm
+			margin-right: 10px
+
+	&__list
+		position: absolute
+		top: 100%
+		margin-top: 10px
+		min-width: 200px
+		max-width: 250px
+		max-height: 200px
+		padding: 10px 0 5px
+		overflow-y: auto
+		list-style: none
+		visibility: hidden
+		opacity: 0
+		+trans
+		background-color: $white
+		box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)
+
+	&__list-link
+		display: block
+		padding: 7px 15px
+		+d-size(font-size, 24)
+		text-decoration: none
+		color: $text
+		+trans
+		&:hover
+			background-color: $green_light
+
+	.icon-chevron
+		margin-top: 4px
+		width: 12px
+		+d-size(width, 27)
+		+rmin(1200)
+			margin-top: 8px
+		+rmin(1600)
+			margin-top: 14px
+.nav
+	flex: 1
+	&__list
+		display: flex
+		flex-flow: column
+		align-items: space-between
+		text-align: right
+		+md
+			flex-flow: row
+			align-items: center	
+
+	&__item
+		+md
+			+d-size(padding-left, 25)
+			+d-size(padding-right, 25)
+	
+	&__link
+		display: block
+		font-size: 19px
+		padding: 7px 0
+	
+		border-bottom: 1px solid transparent		
+		color: $text
+		text-decoration: none 
+		+trans
+		+md
+			display: inline-block
+			padding: 0
+			+d-size(font-size, 24)
+
+		&:hover
+			color: $text_green_bright
+			border-color: $text_green_bright 

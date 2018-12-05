@@ -1,0 +1,26 @@
+---
+title: Rentera Main
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+	
+		<div class="page-body">
+			
+			<main class="page-content">
+				{% include "partials/_filters.html" %}
+				{% include "partials/_flats-list.html" %}	
+				{% include "partials/_pagination.html" %}		
+			</main>		
+			
+		</div>
+
+		<aside class="page-map">
+		</aside>
+	</section>
+	
+	{% include "partials/_footer.html" %}	
+
+{% endblock %}

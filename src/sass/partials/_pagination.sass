@@ -1,0 +1,37 @@
+.pagination
+	display: flex
+	justify-content: space-between
+	align-items: center
+	+d-size(padding-top, 32)
+	+d-size(padding-bottom, 50)
+	+d-size(padding-left, 50)
+	+d-size(padding-right, 50)
+
+	&__list
+		display: flex
+
+	&__item
+		&:not(:last-child)
+			margin-right: 10px
+
+	&__link
+		display: inline-block
+		+d-size(font-size, 24)
+		min-width: 20px
+		color: $text
+		border-bottom: 1px solid transparent
+		text-decoration: none
+		text-align: center
+		+trans
+		&:hover
+			border-color: currentColor
+			color: $green
+			
+		&.is-active
+			border-color: currentColor
+			color: $green
+
+	&__link_dots
+		&:before
+			content: '...'
+

@@ -1,0 +1,13 @@
+{% macro btn(config) %}
+	{% if config.type == 'link' %}
+		<a href="#" class="btn btn-link {{config.class}}" {{config.attrs | safe}}>{{config.text | safe}}</a>
+	{% else %}
+		<button class="btn {{config.class}}" {{config.attrs | safe}}>{{config.text | safe}}</button>
+	{% endif %}
+
+	{% if config.type == 'link' %}
+		</a>
+	{% else %}
+		</button>
+	{% endif %}
+{% endmacro %}

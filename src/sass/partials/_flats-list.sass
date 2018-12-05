@@ -1,0 +1,105 @@
+.flat-card
+	display: flex
+	justify-content: space-between
+	align-items: center
+	+d-size(padding-top, 15)
+	+d-size(padding-bottom, 15)
+	+d-size(padding-left, 50)
+	+d-size(padding-right, 50)
+	border-bottom: 1px solid #808080
+	text-decoration: none
+	color: $text
+	+trans
+	&:hover
+		background-color: $green_extra_light
+
+	&__img
+		position: relative
+		flex-grow: 0
+		flex-shrink: 1
+		max-width: 160px
+		height: 160px
+		margin-right: 20px
+		+d-size(flex-basis, 480)	
+
+		+sm
+			max-width: none
+			height: auto
+			margin-right: 0
+
+		img
+			max-width: 100%	
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	&__img-amount
+		position: absolute
+		bottom: 10px
+		right: 12px
+		text-align: right
+		span
+			+d-size(font-size, 21)			
+			color: $white
+			vertical-align: top
+
+	&__body
+		+d-size(padding-left, 86)	
+		flex: 1
+
+.flat-info
+	&__price
+		margin-bottom: 15px
+		+d-size(margin-bottom, 20)				
+	&__price-sum
+			+d-size(font-size, 48)	
+			+bold
+
+	&__price-currency,
+	&__street,
+	&__under,
+	&__param-title
+		font-size: 12px
+		+d-size(font-size, 26)	
+		line-height: 1		
+		+bold
+
+	&__street,
+	&__under
+		margin-bottom: 10px
+		+d-size(margin-bottom, 25)		
+
+	&__under
+		.icon-metro
+			margin-bottom: -2px
+			margin-right: 5px
+	&__under-title
+		line-height: 1.3	
+
+	&__params
+		display: flex
+		margin-bottom: 10px
+		font-size: 0
+
+	&__param
+		display: flex
+		align-items: center
+		&:not(:last-child)
+			margin-right: 5px
+			+d-size(margin-right, 28)			
+
+	&__param-img
+		+d-size(margin-right, 18)			
+		.icon
+			font-size: 20px
+			+d-size(font-size, 32)			
+
+	&__publication
+		line-height: 1
+		span
+			font-size: 11px
+			+d-size(font-size, 21)				
+			color: $text_green_dirty
+	&__publication-title
+
+	&__publication-date

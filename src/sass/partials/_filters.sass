@@ -1,0 +1,113 @@
+.filters
+	padding: 15px 20px 20px
+	+sm 
+		padding: 25px 0 40px
+	+lg
+		padding: 40px 0
+	+d-size(padding-left, 35)		
+	+d-size(padding-right, 35)		
+
+	&__field
+		&:not(:last-child)
+			margin-bottom: 20px	
+
+	&__actions
+		display: flex
+
+	&__bottom
+		display: flex
+		justify-content: space-between
+
+.filter-types
+	display: flex
+	justify-content: space-between
+	&__list
+		display: flex
+
+	&__item:first-child
+		span
+			margin-left: 0
+
+.filter-action
+	display: flex
+	align-items: center
+	flex-grow: 1
+	flex-shrink: 1
+	+d-size(flex-basis, 273)			
+	+d-size(height, 72)
+	border-radius: 4px
+	padding: 0 15px
+	background-color: $green_light
+	cursor: pointer
+	+sm
+		border-radius: 8px
+	
+	&_type
+		+d-size(flex-basis, 504)		
+
+	&:not(:last-child)
+		margin-right: 5px
+		+sm
+			margin-right: 10px
+
+	&__label
+		font-size: 10px
+		+d-size(font-size, 20)
+		+bold
+
+	&__img
+		width: 20px
+		margin-right: 10px
+		+d-size(margin-right, 35)	
+		font-size: 0
+		svg
+			width: 100%
+
+		.filter-action_district &
+			+d-size(width, 37)
+			// svg
+			// 	+d-size(height, 36)		
+
+		.filter-action_more &
+			+d-size(width, 30)
+			// svg
+			// 	+d-size(height, 8)
+
+.filters-show-btn
+	flex-grow: 0
+	flex-shrink: 1
+	+d-size(flex-basis, 273)
+
+.filters-results
+	+d-size(font-size, 24)
+	color: $green
+
+.reset-filters
+	position: relative
+	+d-size(padding-left, 30)
+	cursor: pointer
+
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		+d-size(top, 5)
+		+d-size(left, 10)
+		width: 1px
+		+d-size(height, 22)
+		border-radius: 1px
+		background-color: $green
+	&:before
+		transform: rotate(45deg)
+	&:after
+		transform: rotate(-45deg)
+
+	span
+		+d-size(font-size, 24)
+		color: $green
+		border-bottom: 1px solid $green
+		+trans
+
+	&:hover
+		span
+			border-bottom-color: transparent

@@ -1,0 +1,35 @@
+{% import "data/_footer.html" as footer %}
+
+<footer class="footer">
+	<div class="footer__top">
+		<nav class="footer-nav">
+			<ul class="footer-nav__list">
+				{% for item in footer.nav %}
+				<li class="footer-nav__item">
+					<a href="" class="footer-nav__link">{{item}}</a>
+				</li>
+				{%endfor%}
+			</ul>
+		</nav>
+	</div>
+
+	<div class="footer__bottom">
+		<div class="footer__copy">&copy; 2018   Всі права захищені</div>
+		<div class="footer__socials socials">
+			<span class="socials__item">
+				<a href="" class="socials__link">
+					{{common.icon('fb')}}
+				</a>
+			</span>
+			<span class="socials__item">
+				<a href="" class="socials__link">
+					{{common.icon('in')}}
+				</a>
+			</span>
+		</div>
+	</div>
+
+	<button type="button" class="go-top">
+		{{common.icon('arrow')}}
+	</button>
+</footer>
