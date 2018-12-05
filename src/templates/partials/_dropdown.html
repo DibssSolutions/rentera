@@ -1,0 +1,16 @@
+{% import "data/_header.html" as header %}
+
+<div class="dropdown js-dropdown">
+    <div class="dropdown__title">
+        <div class="dropdown__title-text">Киев</div>
+        {{common.icon('chevron')}}
+    </div>
+
+    <div class="dropdown__list">
+        {% for city in header.cities %}
+            <li class="dropdown__list-item">
+                <a href="#" class="dropdown__list-link">{{city}}</a>
+            </li>
+        {% endfor %}
+    </div>
+</div>

@@ -10,20 +10,7 @@
 		</div>
 
 		<div class="filters__dropdown">
-			<div class="dropdown">
-				<div class="dropdown__title">
-					<div class="dropdown__title-text">Киев</div> 
-					{{common.icon('chevron')}}
-				</div> 
-
-				<div class="dropdown__list">
-					{% for city in header.cities %}
-					<li class="dropdown__list-item">
-						<a href="#" class="dropdown__list-link">{{city}}</a>
-					</li>
-					{% endfor %}
-				</div>
-			</div>
+			{# {% include "partials/_dropdown.html" %} #}
 		</div>
 	</div>	
 
