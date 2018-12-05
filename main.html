@@ -24,6 +24,30 @@
             <a href="#" class="btn btn-default">Сдать квартиру</a>
           </div>
           <div class="header__menu-wrap">
+            <div class="header__dropdown">
+              <div class="dropdown js-dropdown">
+                <div class="dropdown__title">
+                  <div class="dropdown__title-text">Киев</div>
+                  <svg class="icon icon-chevron">
+                    <use xlink:href="img/sprite.svg#icon-chevron"></use>
+                  </svg>
+                </div>
+                <div class="dropdown__list">
+                  <li class="dropdown__list-item">
+                    <a href="#" class="dropdown__list-link">Чернигов</a>
+                  </li>
+                  <li class="dropdown__list-item">
+                    <a href="#" class="dropdown__list-link">Одесса</a>
+                  </li>
+                  <li class="dropdown__list-item">
+                    <a href="#" class="dropdown__list-link">Харьков</a>
+                  </li>
+                  <li class="dropdown__list-item">
+                    <a href="#" class="dropdown__list-link">Львов</a>
+                  </li>
+                </div>
+              </div>
+            </div>
             <nav class="header__nav nav">
               <ul class="nav__list">
                 <li class="nav__item">
@@ -65,16 +89,6 @@
                 <button class="filter-types__item btn-link btn-link_green" type="button"><span>Улица</span></button>
               </div>
               <div class="filters__dropdown">
-                <div class="dropdown">
-                  <div class="dropdown__title">
-                    <div class="dropdown__title-text">Киев</div>
-                    <svg class="icon icon-chevron">
-                      <use xlink:href="img/sprite.svg#icon-chevron"></use>
-                    </svg>
-                  </div>
-                  <div class="dropdown__list">
-                  </div>
-                </div>
               </div>
             </div>
             <div class="filters__field">
@@ -372,7 +386,7 @@
           </div>
         </main>
       </div>
-      <aside class="page-map">
+      <aside class="page-map" style="background-image: url(img/map-placeholder.jpg)">
       </aside>
       </section>
       <footer class="footer">
