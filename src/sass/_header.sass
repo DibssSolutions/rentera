@@ -187,7 +187,7 @@
 		border-bottom: 1px solid transparent		
 		color: $text
 		text-decoration: none 
-		+trans
+		transition: color $tr, border-color $tr
 		+md
 			display: inline-block
 			padding: 0
@@ -202,3 +202,19 @@
 		transform: translateY(-100%)
 	to 
 		transform: translateY(0)
+
+.user-name
+	display: inline-block
+	color: $text
+	line-height: 1.1
+	font-size: 12px
+	border-right: 1px solid $black
+	cursor: default
+	+trans
+	+sm
+		padding: 5px 20px
+		font-size: 16px
+	+md
+		font-size: 19px
+	+xlg
+		font-size: 21px

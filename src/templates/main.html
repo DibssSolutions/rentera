@@ -1,27 +1,24 @@
----
-title: Rentera Main
----
+--- title: Rentera Main ---
+{% import "partials/_header.html" as header %}
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
 
-	{% include "partials/_header.html" %}
-	
-		<div class="page-body">
-			
-			<main class="page-content">
-				{% include "partials/_filters.html" %}
-				{% include "partials/_flats-list.html" %}	
-				{% include "partials/_pagination.html" %}		
-			</main>		
-			
-		</div>
+    {# {% include "partials/_header.html" %} #}
+    {{header.makeHeader({btnText: 'Сдать квартиру', anonymus: true})}}
+    <div class="page-body">
 
-		<aside class="page-map" style="background-image: url(img/map-placeholder.jpg)">
+        <main class="page-content">
+            {% include "partials/_filters.html" %}
+            {% include "partials/_flats-list.html" %}
+            {% include "partials/_pagination.html" %}
+        </main>
 
-		</aside>
-	</section>
-	
-	{% include "partials/_footer.html" %}	
+    </div>
+
+    <aside class="page-map" style="background-image: url(img/map-placeholder.jpg)"></aside>
+</section>
+
+{% include "partials/_footer.html" %}
 
 {% endblock %}

@@ -1,0 +1,14 @@
+---
+title: Rentera Flat
+---
+{% import "partials/_header.html" as header %}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{# {% include "partials/_header.html" %} #}
+	{{header.makeHeader({btnText: 'Записаться на просмотр', userName: 'Бланк Татьяна' })}}
+	{% include "partials/_flat-slider.html" %}
+	{% include "partials/_footer.html" %}	
+
+{% endblock %}

@@ -1,0 +1,65 @@
+<div class="flats-slider-wrapper">
+    <div class="flats-slider js-flats-slider">
+        {% for item in [1,2,3] %}
+            <div class="flats-slide" style="background-image: url(img/flats-slider/flat-slide-{{item}}.jpg)"></div>
+        {% endfor %}
+    </div>
+    
+    
+    {% set items = [
+        {
+            'price': '20 000',
+            'currency': 'грн/мес.',
+            'street': 'пр-т Победы, 26, ЖК Smart Plaza',
+            'under': 'Шулявская',
+            'params': [
+                {
+                    'img': 'flat',
+                    'title': '1-ком.'
+                }, {
+                    'img': 'flat_size',
+                    'title': '50м2'
+                }, {
+                    'img': 'flat_bed',
+                    'title': '1'
+                }
+            ]
+            
+        }
+
+    ] %}
+    {% for item in items %}
+        <div class="flat-info-wrapper">
+                <div class="flat-info">
+                        <div class="flat-info__price">
+                            <span class="flat-info__price-sum">{{item.price}}</span>
+                            <span class="flat-info__price-currency">{{item.currency}}</span>
+                        </div>
+            
+                        <div class="flat-info__street">{{item.street}}</div>
+                        <div class="flat-info__under">
+                            <span class="flat-info__under-img">{{common.icon('metro')}}</span>
+                            <span class="flat-info__under-title">{{item.under}}</span>
+                        </div>
+            
+                        <div class="flat-info__params">
+                            {% for param in item.params %}
+                                <div class="flat-info__param">
+                                    <div class="flat-info__param-img">
+                                        {{common.icon(param.img)}}
+                                    </div>
+                                    <div class="flat-info__param-title">{{param.title}}</div>
+                                </div>
+                                {%endfor%}
+                            </div>
+                        </div>
+                        <div class="flat-info__cta">
+                            <button class="btn btn-default">
+                                Записаться на просмотр
+                            </button>
+                        </div>
+                    </div>
+        </div>
+    {% endfor %}
+
+</div>

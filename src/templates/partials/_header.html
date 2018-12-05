@@ -1,46 +1,52 @@
 {% import "data/_header.html" as header %}
+{% import "partials/mixins/_common.html" as common %}
 
+{% macro makeHeader(props) %}
 <header class="header js-header">
-	<div class="inner header__inner">
-		<div class="header__logo">
-			<a href="#" class="header__logo-link">
-				<img src="./img/logo-key.svg" alt="Rentera logo" class="header__logo-img">
-				<img src="./img/logo-text.svg" alt="Rentera logo text" class="header__logo-text">
-			</a>
-		</div>
-
-		<div class="header__btn visible-mob">
-			<a href="#" class="btn btn-default">Сдать квартиру</a>
-		</div>
-		
-		<div class="header__menu-wrap">
-			<div class="header__dropdown">
-				{% include "partials/_dropdown.html" %}
+		<div class="inner header__inner">
+			<div class="header__logo">
+				<a href="#" class="header__logo-link">
+					<img src="./img/logo-key.svg" alt="Rentera logo" class="header__logo-img">
+					<img src="./img/logo-text.svg" alt="Rentera logo text" class="header__logo-text">
+				</a>
 			</div>
-			<nav class="header__nav nav">
-				<ul class="nav__list">
-					{% for item in header.nav %}
-					<li class="nav__item">
-						<a class="nav__link" href="/">{{item}}</a>
-					</li>
-					{% endfor %}
-				</ul>
-			</nav>
-
-			<div class="header__btn hidden-sm">
-				<a href="#" class="btn btn-default">Сдать квартиру</a>
+	
+			<div class="header__btn visible-mob">
+				<a href="#" class="btn btn-default">{{props.btnText}}</a>
 			</div>
-
-			<div class="header__login">
-				<button type="button" class="btn-link"><span>Вход</span></button>
-				<button type="button" class="btn-link"><span>Регистрация</span></button>
-			</div>
+			
+			<div class="header__menu-wrap">
+				<div class="header__dropdown">
+					{% include "partials/_dropdown.html" %}
+				</div>
+				<nav class="header__nav nav">
+					<ul class="nav__list">
+						{% for item in header.nav %}
+						<li class="nav__item">
+							<a class="nav__link" href="/">{{item}}</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</nav>
+	
+				<div class="header__btn hidden-sm">
+					<a href="#" class="btn btn-default">{{props.btnText}}</a>
+				</div>
+				<div class="header__login"></div>
+					{% if props.userName %}
+						<span class="user-name">{{props.userName}}</span>
+						<button type="button" class="btn-link"><span>Выход</span></button>
+					{% else %}
+						<button type="button" class="btn-link"><span>Вход</span></button>
+						<button type="button" class="btn-link"><span>Регистрация</span></button>
+					{% endif %}
+				</div>
+	
+			<button class="header__mob-btn hamburger hamburger--collapse js-mob-btn" type="button">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</button>
 		</div>
-
-		<button class="header__mob-btn hamburger hamburger--collapse js-mob-btn" type="button">
-			<span class="hamburger-box">
-				<span class="hamburger-inner"></span>
-			</span>
-		</button>
-	</div>
-</header>
+	</header>
+{% endmacro %}

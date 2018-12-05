@@ -3,3 +3,5 @@ ProjectTitle: rentera
 PageList:
 - file: main.html
   ready: 50
+- file: flat-page.html
+  ready: 50
