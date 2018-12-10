@@ -23,12 +23,15 @@
 
 .footer-nav
 	&__list
-		display: flex
-		flex-flow: row wrap
+		// display: flex
+		// flex-flow: row wrap
 		width: 100%
+		columns: 2
+		+md 
+			columns: 4
 
 	&__item
-		flex: 1 1 25%
+		// flex: 1 1 25%
 		margin-bottom: 5px
 
 	&__link
