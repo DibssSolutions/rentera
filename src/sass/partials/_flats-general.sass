@@ -1,0 +1,26 @@
+.flat-general
+  &__inner
+    display: flex
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 50%
+      height: 100%
+      width: 5px
+      background-color: green
+  &__info,
+  &__map
+    flex: 0 0 50%
+    min-width: 50%
+  &__params
+    display: flex
+    justify-content: space-between
+
+.flat-param
+  text-align: center
+  &__title
+    text-transform: uppercase
+  &__quantity
+    font-weight: 700
