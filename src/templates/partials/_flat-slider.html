@@ -6,7 +6,7 @@
             </div>
         {% endfor %}
         {% for item in[1, 2, 3] %}
-           <div class="flats-slide">
+            <div class="flats-slide">
                 <div class="flats-slide__image" style="background-image: url(img/flats-slider/flat-slide-{{item}}.jpg)"></div>
             </div>
         {% endfor %}
@@ -50,9 +50,9 @@
 
     ] %}
 
-    {# {% for item in items %}
+    {% for item in items %}
         <div class="flat-info-wrapper">
-            <div class="flat-info">
+            <div class="flat-info flat-info_white">
                 <div class="flat-info__price">
                     <span class="flat-info__price-sum">{{item.price}}</span>
                     <span class="flat-info__price-currency">{{item.currency}}</span>
@@ -74,38 +74,38 @@
                         </div>
                         {%endfor%}
                     </div>
+
+                    <div class="flat-info__cta">
+                        <button class="btn btn-default">
+                            Записаться на просмотр
+                        </button>
+                    </div>
                 </div>
-                <div class="flat-info__cta">
-                    <button class="btn btn-default">
-                        Записаться на просмотр
-                    </button>
-                </div>
-            </div>
-        </div>
-    {% endfor %} #}
-</div>
-<div class="flats-thumbs-wrapper">
-    <div class="flats-thumbs js-flats-thumbs" id="js-flats-thumbs">
-        {% for item in[
-            'prev-1.jpg',
-            'prev-2.jpg',
-            'prev-3.jpg',
-            'prev-1.jpg',
-            'prev-2.jpg',
-            'prev-3.jpg',
-            'prev-1.jpg',
-            'prev-2.jpg',
-            'prev-3.jpg',
-            'prev-1.jpg',
-            'prev-2.jpg',
-            'prev-3.jpg',
-            'prev-1.jpg',
-            'prev-2.jpg',
-            'prev-3.jpg'
-        ] %}
-            <div class="flats-thumbs__slide">
-                <div class="flats-thumbs__image" style="background-image: url(img/flats-slider/{{item}})"></div>
             </div>
         {% endfor %}
-    </div> 
-</div>
+    </div>
+    <div class="flats-thumbs-wrapper">
+        <div class="flats-thumbs js-flats-thumbs" id="js-flats-thumbs">
+            {% for item in[
+                'prev-1.jpg',
+                'prev-2.jpg',
+                'prev-3.jpg',
+                'prev-1.jpg',
+                'prev-2.jpg',
+                'prev-3.jpg',
+                'prev-1.jpg',
+                'prev-2.jpg',
+                'prev-3.jpg',
+                'prev-1.jpg',
+                'prev-2.jpg',
+                'prev-3.jpg',
+                'prev-1.jpg',
+                'prev-2.jpg',
+                'prev-3.jpg'
+            ] %}
+                <div class="flats-thumbs__slide">
+                    <div class="flats-thumbs__image" style="background-image: url(img/flats-slider/{{item}})"></div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>

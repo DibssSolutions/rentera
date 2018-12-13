@@ -1,11 +1,13 @@
 import { tns } from 'tiny-slider';
+const buildIcon = name =>
+  `<svg class="icon icon-${name}"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-${name}"></use></svg>`;
 
 var slider = tns({
   container: '#js-flats-slider',
   items: 1,
   mode: 'gallery',
   slideBy: 'page',
-  autoplay: true,
+  // autoplay: true,
   navContainer: '#js-flats-thumbs',
   navAsThumbnails: true,
   mouseDrag: true,
@@ -13,6 +15,8 @@ var slider = tns({
   // gutter: 20
 });
 
+const arrowLeft = buildIcon('chevron-left');
+const arrowRight = buildIcon('chevron-right');
 var thumbs = tns({
   loop: false,
   container: '#js-flats-thumbs',
@@ -23,7 +27,7 @@ var thumbs = tns({
   // center: true,
   // autoWidth: true,
   nav: false,
-  controlsText: ['<span> <= </span>', '<span> => </span>'],
+  controlsText: [`${arrowLeft}`, `${arrowRight}`],
   // arrowKeys: true,
   gutter: 20,
   responsive: {

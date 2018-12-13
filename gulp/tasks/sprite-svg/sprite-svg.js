@@ -13,8 +13,8 @@ gulp.task('sprite:svg', function() {
         .src(config.src.iconsSvg + '/*.svg')
         .pipe(cheerio(function ($, file) {
             if(!$('svg').attr('viewBox')){
-                var w = $('svg').attr('width').replace(/\D/g,'');
-                var h = $('svg').attr('height').replace(/\D/g,'');
+                var w = $('svg').attr('width');
+                var h = $('svg').attr('height');
                 $('svg').attr('viewBox', '0 0 ' + w + ' ' + h);
             } 
         }))

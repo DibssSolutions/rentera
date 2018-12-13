@@ -48,6 +48,8 @@
 		flex: 1
 
 .flat-info
+	&_white
+		color: $white
 	&__price
 		margin-bottom: 15px
 		+d-size(margin-bottom, 20)				
@@ -104,7 +106,13 @@
 
 	&__publication-date
 
+	&__cta
+		flex: 0 0 100%
+		margin-top: 24px
+		.btn
+			width: 100%
+
 .flat-info-wrapper
 	width: 500px
-	padding: 50px 100px	
+	padding: 50px 
 	background-color: rgba($black, 0.53)
